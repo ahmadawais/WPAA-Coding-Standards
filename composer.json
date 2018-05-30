@@ -1,0 +1,10 @@
+{
+    "name": "ahmadawais/wp-coding-standards",
+    "description": "In-house linting and coding standards by Ahmad Awai",
+    "type": "library",
+    "minimum-stability": "stable",
+    "authors": [],
+    "require": {
+        "wp-coding-standards/wpcs": "0.14.1"
+    }
+}
