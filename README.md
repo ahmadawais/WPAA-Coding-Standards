@@ -46,7 +46,7 @@ git clone https://github.com/squizlabs/PHP_CodeSniffer.git phpcs
 git clone -b master https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
 git clone https://github.com/ahmadawais/wpaa-coding-standards.git wpaa
 
-# Inslall composer, phpcs, and phpcbf.
+# Install composer, phpcs, and phpcbf.
 sudo ln -s ~/bin/composer.phar /usr/local/bin/composer
 sudo ln -s ~/bin/phpcs/bin/phpcs /usr/local/bin/phpcs
 sudo ln -s ~/bin/phpcs/bin/phpcbf /usr/local/bin/phpcbf
