@@ -3,10 +3,11 @@
  * Shared functionality for all sub-classes.
  *
  * @since   1.1.0
- * @package WebDevStudios\Sniffs
+ * @package WPAA\Sniffs
  */
 
-namespace WebDevStudios\Sniffs\All;
+namespace WPAA\Sniffs\All;
+
 use PHP_CodeSniffer_Sniff;
 
 /**
@@ -38,12 +39,14 @@ abstract class BaseSniff implements PHP_CodeSniffer_Sniff {
 	 * @param  int                  $severity The severity, defaults to 0.
 	 */
 	protected function error( &$file, $where, $message, $severity = 0 ) {
-		$this->console( (object) array(
-			'message'  => $message,
-			'start'    => $where,
-			'log'      => 'error',
-			'severity' => $severity,
-		), $file );
+		$this->console(
+			(object) array(
+				'message'  => $message,
+				'start'    => $where,
+				'log'      => 'error',
+				'severity' => $severity,
+			), $file
+		);
 	}
 
 	/**
@@ -58,12 +61,14 @@ abstract class BaseSniff implements PHP_CodeSniffer_Sniff {
 	 * @param  int                  $severity The severity, defaults to 0.
 	 */
 	protected function warn( &$file, $where, $message, $severity = 0 ) {
-		$this->console( (object) array(
-			'message'  => $message,
-			'start'    => $where,
-			'log'      => 'warning',
-			'severity' => $severity,
-		), $file );
+		$this->console(
+			(object) array(
+				'message'  => $message,
+				'start'    => $where,
+				'log'      => 'warning',
+				'severity' => $severity,
+			), $file
+		);
 	}
 
 	/**

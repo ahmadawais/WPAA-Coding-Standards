@@ -36,7 +36,7 @@ For having these standards you need to install a couple of things like Composer,
 
 ```sh
 # Make ~/bin dir.
-cd ~ && mkdir bin && cd bin
+cd ~ && mkdir -p bin && cd bin
 
 # Download Composer.
 curl -s http://getcomposer.org/installer | php

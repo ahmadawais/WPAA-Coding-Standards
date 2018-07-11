@@ -5,10 +5,10 @@
  * The since tag is required on all docblock elements.
  *
  * @since   1.1.0
- * @package WebDevStudios\Sniffs
+ * @package WPAA\Sniffs
  */
 
-namespace WebDevStudios\Sniffs\All;
+namespace WPAA\Sniffs\All;
 
 use PHP_CodeSniffer_Sniff;
 use PHP_CodeSniffer_File;

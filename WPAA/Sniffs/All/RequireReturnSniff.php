@@ -6,10 +6,11 @@
  * inside of the function.
  *
  * @since   1.1.0
- * @package WebDevStudios\Sniffs
+ * @package WPAA\Sniffs
  */
 
-namespace WebDevStudios\Sniffs\All;
+namespace WPAA\Sniffs\All;
+
 use PHP_CodeSniffer_Sniff;
 use PHP_CodeSniffer_File;
 
@@ -66,8 +67,8 @@ class RequireReturnSniff extends BaseSniff {
 	 * @return void                                  Skips errors when not working with functions.
 	 */
 	public function process( PHP_CodeSniffer_File $file, $doc_block_start ) {
-		$this->tokens = $file->getTokens();
-		$token = $this->tokens[ $doc_block_start ];
+		$this->tokens  = $file->getTokens();
+		$token         = $this->tokens[ $doc_block_start ];
 		$doc_block_end = $token['comment_closer'];
 
 		// The @ return in the comment block, false by default.
@@ -82,9 +83,11 @@ class RequireReturnSniff extends BaseSniff {
 		}
 
 		// If this is a function, does it have a return;? If not, this will come back as true.
-		$examine_function = $this->examine_function( $file, (object) [
-			'doc_block_end' => $doc_block_end,
-		] );
+		$examine_function = $this->examine_function(
+			$file, (object) [
+				'doc_block_end' => $doc_block_end,
+			]
+		);
 
 		if ( 'not_a_function' === $examine_function ) {
 
@@ -124,7 +127,7 @@ class RequireReturnSniff extends BaseSniff {
 			return 'not_a_function';
 		}
 
-		$doc_block_end_line = $this->get_token( $args->doc_block_end, 'line' );
+		$doc_block_end_line  = $this->get_token( $args->doc_block_end, 'line' );
 		$function_start_line = $this->get_token( $function_start, 'line' );
 
 		if ( $function_start_line !== $doc_block_end_line + 1 ) {
