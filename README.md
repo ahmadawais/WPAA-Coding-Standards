@@ -1,4 +1,9 @@
-<img width="300" src="https://on.ahmda.ws/rwYc/c" alt="CGB PAA-Coding-Standards by Ahmad Awais">
+<h1 align="center">
+  <img src="https://on.ahmda.ws/rwYc/c" />
+
+  WPAA-Coding-Standards
+</h1>
+
 
 <br>
 
